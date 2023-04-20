@@ -1,4 +1,4 @@
-import React, { useState,useEffect }  from 'react';
+import React, { useState }  from 'react';
 import "./App.css"
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
       <nav className="navbar navbar-expand-lg bg-body-tertiary sec">
         <div className="container-fluid justify-content-center fw-bold">
           <a className="navbar-brand" href="#">
-            Terminal Manager Contact Number
+            Terminal Manager Contact
           </a>
         </div>
       </nav>
@@ -41,10 +41,10 @@ function App() {
         <form>
             <div className="row form-group">
                 <div className="col-sm-4">
-                    <div className="input-group date" id="datepicker">
-                        <input placeholder='Enter Airport Name...' onChange={e=>setLocation(e.target.value)} type="text" className="form-control"/>
+                    {/* <div className="input-group date" id="datepicker"> */}
+                        <input placeholder='Airport Name...' onChange={e=>setLocation(e.target.value)} type="text" className="form-control"/>
                 
-                    </div>
+                    {/* </div> */}
                 </div>
                 <div className="col-sm-4">
                 <button
@@ -71,9 +71,9 @@ function App() {
   <thead className="thead-dark">
     <tr>
       <th scope="col">S.No.</th>
-      <th scope="col">Location</th>
+      {/* <th scope="col">Location</th> */}
       <th scope="col">Airport</th>
-      <th scope="col">Contact No.</th>
+      <th scope="col">Contact</th>
       <th scope="col">Remarks</th>
       
     </tr>
@@ -83,7 +83,7 @@ function App() {
       return(
         <tr key={id}>
           <th scope="row">{index+1}</th>
-          <td>{dataJson[id]["Location"]}</td>
+          {/* <td>{dataJson[id]["Location"]}</td> */}
           <td>{dataJson[id]["Airport Name"]}</td>
           <td>{dataJson[id]["Contact"]}</td>
           <td>{dataJson[id]["Remarks"]}</td>
